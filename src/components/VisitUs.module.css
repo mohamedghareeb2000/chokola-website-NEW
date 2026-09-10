@@ -1,0 +1,372 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 640px;
+  box-sizing: border-box;
+  background: var(--blush-visit-bg);
+  overflow: hidden;
+  padding: clamp(40px, 5vw, 76px) clamp(20px, 4.4vw, 72px);
+}
+
+@media (min-width: 901px) {
+  .section {
+    height: 100vh;
+  }
+}
+
+.blobLeft {
+  position: absolute;
+  left: -6%;
+  top: -14%;
+  width: 46%;
+  height: 52%;
+  background: var(--blush-visit-1);
+  border-radius: 52% 48% 44% 56% / 46% 58% 42% 54%;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.blobRight {
+  position: absolute;
+  right: -12%;
+  bottom: -18%;
+  width: 44%;
+  height: 56%;
+  background: var(--blush-visit-2);
+  border-radius: 48% 52% 56% 44% / 54% 46% 54% 46%;
+  opacity: 0.42;
+  z-index: 0;
+}
+
+.grid {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.06fr 0.94fr;
+  gap: clamp(32px, 4.4vw, 72px);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    height: auto;
+    padding: clamp(32px, 8vw, 56px) 0;
+  }
+}
+
+.left {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: clamp(10px, 0.86vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-body);
+}
+
+.labelUnderline {
+  display: block;
+  margin-top: clamp(6px, 0.7vw, 11px);
+  width: clamp(74px, 7.4vw, 118px);
+  height: clamp(9px, 0.95vw, 15px);
+  color: var(--cream-white);
+}
+
+.sweetTooth {
+  display: block;
+  margin-top: clamp(8px, 1vw, 16px);
+  font-family: var(--font-accent);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(24px, 2.5vw, 40px);
+  line-height: 1;
+  color: var(--cream-white);
+}
+
+.headline {
+  margin: clamp(2px, 0.4vw, 8px) 0 0;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: clamp(42px, 6.4vw, 98px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  color: var(--choc-900);
+  text-wrap: balance;
+}
+
+.locationRow {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1vw, 16px);
+  margin-top: clamp(16px, 1.8vw, 28px);
+}
+
+.locationIcon {
+  width: clamp(16px, 1.4vw, 22px);
+  height: auto;
+  color: var(--choc-900);
+  flex: none;
+}
+
+.locationText {
+  font-family: var(--font-ui);
+  font-size: clamp(14px, 1.14vw, 18px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--choc-900);
+}
+
+.addressBlock {
+  margin-top: clamp(18px, 2vw, 30px);
+  padding-top: clamp(18px, 2vw, 30px);
+  border-top: 1px solid var(--gold-line);
+  max-width: min(100%, 460px);
+}
+
+.addressText {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: clamp(17px, 1.5vw, 24px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--choc-900);
+}
+
+.addressCity {
+  color: var(--text-body);
+}
+
+.addressSep {
+  color: rgba(59, 33, 28, 0.42);
+}
+
+.hoursBlock {
+  margin-top: clamp(14px, 1.5vw, 24px);
+  width: min(100%, 460px);
+}
+
+.hoursLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: clamp(10px, 0.86vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--choc-900);
+}
+
+.hoursIcon {
+  width: 1.15em;
+  height: 1.15em;
+  color: var(--blush-visit-2);
+  flex: none;
+}
+
+.hoursRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: clamp(16px, 2vw, 32px);
+  margin-top: clamp(10px, 1.1vw, 18px);
+}
+
+.hoursRow + .hoursRow {
+  margin-top: 0;
+}
+
+.hoursDivider {
+  height: 1px;
+  background: rgba(201, 168, 106, 0.55);
+  margin: clamp(8px, 0.9vw, 14px) 0;
+}
+
+.hoursDays {
+  font-family: var(--font-ui);
+  font-size: clamp(13px, 1.08vw, 17px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--choc-900);
+}
+
+.hoursTime {
+  font-family: var(--font-ui);
+  font-size: clamp(13px, 1.08vw, 17px);
+  font-weight: 400;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  color: #5c3a33;
+}
+
+.hoursNote {
+  margin: clamp(10px, 1.1vw, 16px) 0 0;
+  font-family: var(--font-ui);
+  font-size: clamp(10px, 0.76vw, 12px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(74, 46, 43, 0.58);
+}
+
+.contactRow {
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 38px);
+  margin-top: clamp(16px, 1.7vw, 26px);
+  padding-top: clamp(14px, 1.5vw, 22px);
+  border-top: 1px solid rgba(201, 168, 106, 0.55);
+  width: min(100%, 460px);
+}
+
+.phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-ui);
+  font-size: clamp(13px, 1.08vw, 17px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--choc-900);
+  transition: color 120ms linear;
+}
+
+.phoneLink:hover {
+  color: #8b5560;
+}
+
+.phoneIcon {
+  width: clamp(15px, 1.2vw, 18px);
+  height: auto;
+  color: var(--blush-visit-2);
+  flex: none;
+}
+
+.right {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mapBox {
+  position: relative;
+  background: var(--cream-white);
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: clamp(60px, 7vw, 120px) 0 0 0;
+}
+
+.mapSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.routeSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--blush-visit-2);
+}
+
+.pin {
+  position: absolute;
+  left: 56%;
+  top: 32%;
+  width: clamp(58px, 6.6vw, 104px);
+  height: auto;
+  color: var(--choc-900);
+}
+
+.thatsUs {
+  position: absolute;
+  left: 62%;
+  top: calc(32% + clamp(58px, 6.6vw, 104px) * 1.24);
+  font-family: var(--font-accent);
+  font-weight: 900;
+  font-size: clamp(18px, 1.7vw, 28px);
+  line-height: 1;
+  color: var(--choc-900);
+  white-space: nowrap;
+}
+
+.directionsCta {
+  position: absolute;
+  left: clamp(16px, 1.8vw, 30px);
+  bottom: clamp(16px, 1.8vw, 30px);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--choc-900);
+  color: var(--cream-white);
+  border-radius: 999px;
+  padding: clamp(12px, 1.05vw, 17px) clamp(20px, 1.85vw, 34px);
+  font-family: var(--font-ui);
+  font-size: clamp(10px, 0.84vw, 13px);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 120ms linear;
+}
+
+.directionsCta:hover {
+  background: #57332d;
+}
+
+.cedarRd {
+  position: absolute;
+  right: clamp(16px, 1.8vw, 30px);
+  top: clamp(14px, 1.5vw, 24px);
+  font-family: var(--font-ui);
+  font-size: clamp(9px, 0.78vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blush-visit-2);
+}
+
+.richmondRd {
+  position: absolute;
+  left: clamp(16px, 1.8vw, 30px);
+  top: 41%;
+  font-family: var(--font-ui);
+  font-size: clamp(9px, 0.78vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(176, 122, 141, 0.75);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    justify-content: center;
+    margin-top: clamp(24px, 6vw, 48px);
+  }
+
+  .mapBox {
+    max-width: 480px;
+  }
+}
