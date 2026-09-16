@@ -12,6 +12,63 @@ import styles from "./MenuHighlights.module.css";
  * isn't a dedicated pancake photo — see the asset status report.
  */
 
+const MOBILE_CARDS = [
+  {
+    key: "crepes",
+    src: "/images/story-main-v2.png",
+    alt: "Pistachio chocolate crepe on a speckled plate",
+    objectPosition: "50% 56%",
+    title: "Crepes",
+    desc: "Folded bliss, layered chocolate.",
+    size: "full" as const,
+  },
+  {
+    key: "waffles",
+    src: "/images/mh-waffles.webp",
+    alt: "Chokola waffle split open with vanilla ice cream and chocolate drizzle",
+    objectPosition: "50% 50%",
+    title: "Waffles",
+    desc: "Crispy outside, soft inside.",
+    size: "half" as const,
+  },
+  {
+    key: "pancakes",
+    src: "/images/mh-pancakes.webp",
+    alt: "Folded crepe rolls drizzled with chocolate on a plate",
+    objectPosition: "50% 50%",
+    title: "Mini Pancakes",
+    desc: "Small bites, big happiness.",
+    size: "half" as const,
+  },
+  {
+    key: "cups",
+    src: "/images/mh-cups.webp",
+    alt: "Chokola specialty dessert cup layered with chocolate, pistachio cream and strawberries",
+    objectPosition: "50% 50%",
+    title: "Specialty Cups",
+    desc: "Layers of flavor, in every spoon.",
+    size: "full" as const,
+  },
+  {
+    key: "cheesecake",
+    src: "/images/mh-cheesecake.webp",
+    alt: "Chokola cheesecake slice topped with strawberries and strawberry sauce",
+    objectPosition: "50% 50%",
+    title: "Cheesecake",
+    desc: "Silky texture, endless joy.",
+    size: "half" as const,
+  },
+  {
+    key: "shakes",
+    src: "/images/mh-shakes.webp",
+    alt: "Two Chokola milkshakes, strawberry and chocolate, with fresh strawberries",
+    objectPosition: "50% 50%",
+    title: "Shakes",
+    desc: "Cool sips, sweeter days.",
+    size: "half" as const,
+  },
+];
+
 export default function MenuHighlights() {
   return (
     <section
@@ -23,6 +80,103 @@ export default function MenuHighlights() {
       <div className={styles.blobRight} />
 
       <div className={styles.inner}>
+        <div className={styles.mobileHeader}>
+          <span className={styles.mobileLabel}>Our Desserts</span>
+          <svg
+            viewBox="0 0 190 26"
+            fill="none"
+            preserveAspectRatio="none"
+            className={styles.mobileLabelUnderline}
+            aria-hidden="true"
+          >
+            <path
+              d="M4 10 C46 1 124 1 184 8"
+              stroke="currentColor"
+              strokeWidth="4.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M20 21 C62 13 118 13 164 19"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              opacity=".55"
+            />
+          </svg>
+
+          <h2 className={styles.mobileHeadline}>
+            Six ways to
+            <span className={styles.mobileHeadlineAccent}>
+              give in.
+              <svg
+                viewBox="0 0 240 20"
+                preserveAspectRatio="none"
+                fill="none"
+                className={styles.mobileHeadlineUnderline}
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 13 C64 4 168 4 236 11"
+                  stroke="currentColor"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+          </h2>
+          <span className={styles.mobileCraving}>Pick the craving.</span>
+          <p className={styles.mobileDesc}>
+            From classic favorites to creative twists, our desserts are made
+            to satisfy every mood.
+          </p>
+        </div>
+
+        <div className={styles.mobileGrid}>
+          {MOBILE_CARDS.map((card) => (
+            <div
+              key={card.key}
+              className={`${styles.mobileCard} ${
+                card.size === "full"
+                  ? styles.mobileCardFull
+                  : styles.mobileCardHalf
+              }`}
+            >
+              <Image
+                src={card.src}
+                alt={card.alt}
+                fill
+                sizes={card.size === "full" ? "100vw" : "50vw"}
+                style={{ objectFit: "cover", objectPosition: card.objectPosition }}
+              />
+              <div className={styles.mobileCardShade} />
+              <div className={styles.mobileCardCaption}>
+                <span className={styles.mobileCardTitle}>{card.title}</span>
+                <span className={styles.mobileCardDesc}>{card.desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.mobileCtaWrap}>
+          <a href="#menu" className={styles.mobileCtaButton}>
+            View Full Menu
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              style={{ width: "1.2em", height: "1.2em" }}
+              aria-hidden="true"
+            >
+              <path
+                d="M4 12h15M13 6l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+
         <div className={styles.header}>
           <div className={styles.headerLeft}>
             <span className={styles.label}>Menu Highlights</span>

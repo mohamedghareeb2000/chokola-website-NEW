@@ -12,7 +12,7 @@ const NAV_LINKS = [
 const SOCIAL_LINKS = [
   {
     label: "Instagram",
-    href: "#instagram",
+    href: "https://www.instagram.com/chokolabeachwood?igsh=MW5xeWt3bXR0NXJlZg==",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className={styles.socialIcon}>
         <rect
@@ -31,7 +31,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: "TikTok",
-    href: "#tiktok",
+    href: "https://www.tiktok.com/@chokolabeachwood?_r=1&_t=ZT-98xTffaKrrZ",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className={styles.socialIcon}>
         <path
@@ -53,7 +53,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: "Facebook",
-    href: "#facebook",
+    href: "https://www.facebook.com/share/18FxX63Suv/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className={styles.socialIcon}>
         <path
@@ -99,6 +99,8 @@ export default function Footer() {
             <a
               key={social.label}
               href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={social.label}
               className={styles.socialLink}
             >

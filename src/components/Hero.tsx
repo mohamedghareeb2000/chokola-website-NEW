@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
 import { ArrowRightIcon, MapPinIcon } from "./icons";
+import heroImage from "../../public/images/hero-v3.jpg";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -8,10 +9,11 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.visualWrap}>
         <Image
-          src="/images/hero-v3.jpg"
+          src={heroImage}
           alt="Chocolate pistachio crepe with strawberries, pistachio cream and a chocolate parfait cup"
           fill
           priority
+          placeholder="blur"
           sizes="(max-width: 860px) 100vw, 58vw"
           className={styles.visualImg}
         />

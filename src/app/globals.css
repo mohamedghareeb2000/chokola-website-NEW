@@ -24,9 +24,6 @@
 
   --gold-line: rgba(201, 168, 106, 0.6);
   --sage: #8fa04a;
-
-  --font-ui: var(--font-ui, "Montserrat", "Helvetica Neue", Arial, sans-serif);
-  --font-accent: var(--font-accent, "Fraunces", Georgia, serif);
 }
 
 @keyframes chReveal {

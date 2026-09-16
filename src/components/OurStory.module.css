@@ -89,9 +89,9 @@
 .cravingUnderline {
   position: absolute;
   left: 2%;
-  bottom: 0.02em;
-  width: 280px;
-  height: 8px;
+  bottom: -0.04em;
+  width: 96%;
+  height: 0.16em;
   color: var(--pink-story);
 }
 
@@ -281,95 +281,26 @@
   color: var(--text-body);
 }
 
-/* ---------- Mobile: dismantle the absolute stage ---------- */
-
-@media (max-width: 720px) {
-  .canvas {
-    aspect-ratio: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 48px 22px 44px;
-    box-sizing: border-box;
-  }
-
-  .canvas > * {
-    position: static;
-    left: auto;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    height: auto;
-  }
-
-  .textBlock {
-    order: 1;
-  }
-
-  .mainImageWrap {
-    position: relative;
-    order: 2;
-    aspect-ratio: 4 / 5;
+/* Mobile: no layout overrides — the canvas is fully proportional (aspect-ratio + cqw),
+   so it renders identically to desktop, just scaled down to fit the viewport.
+   Below ~390px the paragraph/delight font-size clamps had already hit their px
+   floor while the container kept shrinking, so the nowrap text started
+   overrunning its box into the row below. Dropping the floor lets them keep
+   shrinking at the same rate as everything else instead of colliding. */
+@media (max-width: 389px) {
+  .label {
+    font-size: 1.3cqw;
   }
 
   .headline {
-    font-size: 34px;
-  }
-
-  .headlineLine,
-  .paragraph {
-    white-space: normal;
+    font-size: 5.9cqw;
   }
 
   .paragraph {
-    font-size: 15px;
+    font-size: 1.56cqw;
   }
 
-  .paragraph br {
-    display: none;
-  }
-
-  .cravingUnderline,
-  .delightUnderline {
-    width: 100%;
-    height: 0.16em;
-    left: 0;
-    bottom: -0.16em;
-  }
-
-  .leaf,
-  .blob1,
-  .blob2,
-  .doodleLeaf,
-  .doodleHeart,
-  .connector {
-    display: none;
-  }
-
-  .momentPhotoA,
-  .momentPhotoB,
-  .momentPhotoC {
-    position: relative;
-    height: 230px;
-    border-radius: 70px 70px 0 0;
-  }
-
-  .momentPhotoA {
-    order: 5;
-  }
-
-  .momentPhotoB {
-    order: 8;
-  }
-
-  .momentPhotoC {
-    order: 11;
-  }
-
-  .momentNumber,
-  .momentBubble {
-    position: static;
-    width: 100%;
+  .delight {
+    font-size: 2.9cqw;
   }
 }

@@ -430,24 +430,181 @@
   color: var(--sage);
 }
 
+.mobileHeader,
+.mobileGrid,
+.mobileCtaWrap {
+  display: none;
+}
+
 @media (max-width: 860px) {
-  .grid {
+  .header,
+  .grid,
+  .blobLeft,
+  .blobRight {
+    display: none;
+  }
+
+  .mobileHeader {
+    display: block;
+    position: relative;
+  }
+
+  .mobileLabel {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7b4a44;
+  }
+
+  .mobileLabelUnderline {
+    display: block;
+    margin-top: 8px;
+    width: 84px;
+    height: 10px;
+    color: var(--pink-story);
+  }
+
+  .mobileHeadline {
     display: flex;
     flex-direction: column;
+    margin: 14px 0 0;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--choc-900);
   }
 
-  .crepes,
-  .cups,
-  .waffles,
-  .pancakes,
-  .cheesecake,
-  .shakes,
-  .ctaBlock {
-    margin-top: 0;
-    align-self: stretch;
+  .mobileHeadlineAccent {
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+    color: var(--pink-story);
+    font-family: var(--font-accent);
+    font-weight: 900;
+    font-style: italic;
   }
 
-  .cupsFrame {
-    min-height: 380px;
+  .mobileHeadlineUnderline {
+    position: absolute;
+    left: 1%;
+    bottom: -0.1em;
+    width: 98%;
+    height: 0.16em;
+    color: var(--pink-story);
+  }
+
+  .mobileCraving {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--font-accent);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--pink-story);
+  }
+
+  .mobileDesc {
+    margin: 14px 0 0;
+    max-width: 300px;
+    font-family: var(--font-ui);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-body);
+  }
+
+  .mobileGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .mobileCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 26px;
+  }
+
+  .mobileCardFull {
+    grid-column: 1 / -1;
+    aspect-ratio: 2.1 / 1;
+  }
+
+  .mobileCardHalf {
+    aspect-ratio: 3 / 2;
+  }
+
+  .mobileCardShade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(45, 24, 20, 0.72) 0%,
+      rgba(45, 24, 20, 0.5) 40%,
+      rgba(45, 24, 20, 0) 80%
+    );
+  }
+
+  .mobileCardCaption {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .mobileCardTitle {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.1;
+    text-wrap: pretty;
+    color: var(--cream-white);
+  }
+
+  .mobileCardFull .mobileCardTitle {
+    font-size: 23px;
+  }
+
+  .mobileCardDesc {
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    line-height: 1.28;
+    text-wrap: pretty;
+    color: rgba(255, 245, 240, 0.86);
+  }
+
+  .mobileCtaWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .mobileCtaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--choc-900);
+    color: var(--cream-white);
+    border-radius: 999px;
+    padding: 16px 34px;
+    font-family: var(--font-ui);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: background 120ms linear;
+  }
+
+  .mobileCtaButton:hover {
+    background: #57332d;
   }
 }
