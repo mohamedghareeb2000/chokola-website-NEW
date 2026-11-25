@@ -81,7 +81,7 @@ export default function MenuHighlights() {
 
       <div className={styles.inner}>
         <div className={styles.mobileHeader}>
-          <span className={styles.mobileLabel}>Our Desserts</span>
+          <span className={styles.mobileLabel}>Menu Highlights</span>
           <svg
             viewBox="0 0 190 26"
             fill="none"
@@ -107,7 +107,7 @@ export default function MenuHighlights() {
           <h2 className={styles.mobileHeadline}>
             Six ways to
             <span className={styles.mobileHeadlineAccent}>
-              give in.
+              satisfy your cravings.
               <svg
                 viewBox="0 0 240 20"
                 preserveAspectRatio="none"
@@ -124,10 +124,10 @@ export default function MenuHighlights() {
               </svg>
             </span>
           </h2>
-          <span className={styles.mobileCraving}>Pick the craving.</span>
+          <span className={styles.mobileCraving}>Pick your craving.</span>
           <p className={styles.mobileDesc}>
-            From classic favorites to creative twists, our desserts are made
-            to satisfy every mood.
+            Sweet, rich, and made for every mood. Choose your favorite and
+            find your next obsession.
           </p>
         </div>
 
@@ -158,6 +158,7 @@ export default function MenuHighlights() {
         </div>
 
         <div className={styles.mobileCtaWrap}>
+          <p className={styles.mobileDesc}>So many choices. One sweet obsession.</p>
           <a href="#menu" className={styles.mobileCtaButton}>
             View Full Menu
             <svg
@@ -204,7 +205,7 @@ export default function MenuHighlights() {
             <h2 id="menu-heading" className={styles.headline}>
               Six ways to{" "}
               <span className={styles.headlineAccent}>
-                give in.
+                satisfy your cravings.
                 <svg
                   viewBox="0 0 240 20"
                   preserveAspectRatio="none"
@@ -223,10 +224,10 @@ export default function MenuHighlights() {
             </h2>
           </div>
           <div className={styles.headerRight}>
-            <span className={styles.pickCraving}>Pick the craving.</span>
+            <span className={styles.pickCraving}>Pick your craving.</span>
             <p className={styles.pickText}>
-              Six things we make obsessively well. Crisp, creamy, cold, warm
-              — pick a mood and we handle the rest.
+              Sweet, rich, and made for every mood. Choose your favorite and
+              find your next obsession.
             </p>
           </div>
         </div>
@@ -359,7 +360,7 @@ export default function MenuHighlights() {
 
           <div className={styles.ctaBlock}>
             <p className={styles.ctaText}>
-              Forty more on the board — parfaits, fondue, seasonal drops.
+              So many choices. One sweet obsession.
             </p>
             <div className={styles.ctaWrap}>
               <a href="#menu" className={styles.ctaButton}>

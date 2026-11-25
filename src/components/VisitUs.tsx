@@ -35,14 +35,15 @@ export default function VisitUs() {
               opacity=".55"
             />
           </svg>
-          <span className={styles.sweetTooth}>Sweet tooth,</span>
+          <span className={styles.sweetTooth}>Craving something sweet?</span>
           <h2 id="visit-heading" className={styles.headline}>
-            Come
+            Come find your
             <br />
-            find us.
+            new favorite spot.
           </h2>
 
-          <div className={styles.locationRow}>
+          <p className={styles.addressText}>Your next dessert obsession is waiting at:</p>
+          <div className={styles.addressBlock}>
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -57,25 +58,21 @@ export default function VisitUs() {
               />
               <circle cx="12" cy="10" r="2.4" stroke="currentColor" strokeWidth="1.8" />
             </svg>
-            <span className={styles.locationText}>
-              Inside Beachwood Place Mall
-            </span>
-          </div>
-
-          <div className={styles.addressBlock}>
             <p className={styles.addressText}>
-              26300 Cedar Road
-              <span className={styles.addressSep}> · </span>
-              Space #1035
+              <span className={styles.locationText}>
+                Beachwood Place Mall – Level 1, next to ZARA
+              </span>
               <br />
-              <span className={styles.addressCity}>Beachwood, OH 44122</span>
+              26300 Cedar Road, Space 1035
+              <br />
+              <span className={styles.addressCity}>Beachwood, OH 44122, USA</span>
             </p>
           </div>
 
           <OpeningHours
             groups={[
-              { days: "Monday – Friday", time: "7 AM – 6 PM" },
-              { days: "Saturday – Sunday", time: "12 PM – 12 AM" },
+              { days: "Monday – Saturday", time: "11 AM – 8 PM" },
+              { days: "Sunday", time: "12 PM – 6 PM" },
             ]}
             note="Holiday hours may vary"
           />
@@ -170,7 +167,7 @@ export default function VisitUs() {
             <span className={styles.thatsUs}>that&apos;s us</span>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Chokola+Dessert+Lounge+26300+Cedar+Rd+Beachwood+OH+44122"
+              href="https://www.google.com/maps/search/?api=1&query=Chokola+Dessert+Lounge,+26300+Cedar+Road,+Space+1035,+Beachwood,+OH+44122,+USA"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.directionsCta}

@@ -41,7 +41,7 @@
 .grid {
   position: relative;
   z-index: 2;
-  height: 100%;
+  height: auto;
   max-width: 1320px;
   margin: 0 auto;
   display: grid;
@@ -94,27 +94,20 @@
 }
 
 .headline {
-  margin: clamp(2px, 0.4vw, 8px) 0 0;
+  margin: 16px 0 20px;
   font-family: var(--font-ui);
   font-weight: 600;
-  font-size: clamp(42px, 6.4vw, 98px);
-  line-height: 0.94;
-  letter-spacing: -0.035em;
+  font-size: 52px;
+  line-height: 1.12;
+  letter-spacing: 0;
   color: var(--choc-900);
   text-wrap: balance;
-}
-
-.locationRow {
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  gap: clamp(10px, 1vw, 16px);
-  margin-top: clamp(16px, 1.8vw, 28px);
 }
 
 .locationIcon {
   width: clamp(16px, 1.4vw, 22px);
   height: auto;
+  margin-top: 0.35rem;
   color: var(--choc-900);
   flex: none;
 }
@@ -128,6 +121,9 @@
 }
 
 .addressBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(10px, 1vw, 16px);
   margin-top: clamp(18px, 2vw, 30px);
   padding-top: clamp(18px, 2vw, 30px);
   border-top: 1px solid var(--gold-line);
@@ -145,10 +141,6 @@
 
 .addressCity {
   color: var(--text-body);
-}
-
-.addressSep {
-  color: rgba(59, 33, 28, 0.42);
 }
 
 .hoursBlock {
@@ -357,6 +349,10 @@
 }
 
 @media (max-width: 900px) {
+  .headline {
+    font-size: 40px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }

@@ -1,0 +1,9 @@
+/* No layout overrides: only the document canvas on this test route changes. */
+:global(html):has(.realScene),
+:global(body):has(.realScene) {
+  background: var(--safari-test-canvas, #e28a82);
+}
+
+.realScene {
+  color: var(--choc-800);
+}

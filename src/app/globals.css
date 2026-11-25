@@ -88,9 +88,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--cream-hero);
   overflow-x: hidden;
   max-width: 100vw;
+}
+
+html {
+  background: var(--pink-hero);
 }
 
 * {
@@ -98,9 +101,19 @@ body {
 }
 
 body {
+  background: var(--pink-hero);
   font-family: var(--font-ui);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 860px) {
+    html:has(main[data-safari-blend]),
+    body:has(main[data-safari-blend]) {
+      background: var(--safari-canvas, #e28a82);
+    }
+  }
 }
 
 a {

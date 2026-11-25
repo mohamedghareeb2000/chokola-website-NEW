@@ -89,8 +89,8 @@ export default function Footer() {
             </Link>
           ))}
           <span className={styles.hours}>
-            <span className={styles.hoursLine}>Mon–Fri &nbsp;7 AM – 6 PM</span>
-            <span className={styles.hoursLine}>Sat–Sun &nbsp;12 PM – 12 AM</span>
+            <span className={styles.hoursLine}>Mon–Sat &nbsp;11 AM – 8 PM</span>
+            <span className={styles.hoursLine}>Sun &nbsp;12 PM – 6 PM</span>
           </span>
         </nav>
 

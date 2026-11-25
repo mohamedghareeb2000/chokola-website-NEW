@@ -194,6 +194,7 @@
 
 .cupsHeader {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 12px;
 }
@@ -311,6 +312,7 @@
 
 .cheesecakeMeta {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: 12px;
   margin-top: clamp(10px, 1vw, 16px);
@@ -500,7 +502,7 @@
 
   .mobileCraving {
     display: block;
-    margin-top: 4px;
+    margin-top: 22px;
     font-family: var(--font-accent);
     font-weight: 900;
     font-style: italic;
@@ -584,8 +586,16 @@
 
   .mobileCtaWrap {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
     justify-content: center;
     margin-top: 28px;
+  }
+
+  .mobileCtaWrap .mobileDesc {
+    margin: 0;
+    text-align: center;
   }
 
   .mobileCtaButton {

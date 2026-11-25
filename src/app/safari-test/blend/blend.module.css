@@ -1,0 +1,22 @@
+.blendScene {
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .blendScene main > section:first-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 128px;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      var(--safari-test-hero, #e28a82) 0px,
+      var(--safari-test-hero, #e28a82) 4px,
+      transparent 100%
+    );
+  }
+}

@@ -45,7 +45,7 @@ export default function OurStory() {
             <span className={styles.headlineLine} style={{ lineHeight: 1.18 }}>
               a{" "}
               <span className={styles.craving}>
-                craving
+                craving.
                 <svg
                   viewBox="0 0 240 20"
                   preserveAspectRatio="none"
@@ -62,29 +62,23 @@ export default function OurStory() {
                 </svg>
               </span>
             </span>
-            <span className={styles.headlineLine}>the market</span>
+            <span className={styles.headlineLine}>Made for every</span>
             <span className={styles.headlineLine}>
-              was <span className={styles.missing}>missing.</span>
+              <span className={styles.missing}>sweet moment.</span>
             </span>
           </h2>
 
           <p className={styles.paragraph}>
-            Chokola started in the U.S. with a simple
-            <br />
-            realization: there was a dessert experience
-            <br />
-            we loved, but couldn&apos;t find done right.
-            <br />
-            So we created it—refined every detail,
-            <br />
-            and reimagined it into something
-            <br />
-            fresh, elevated, and visually unforgettable.
+            Chokola started with a simple idea: desserts should be more than
+            just a treat. They should be a moment you look forward to, a bite
+            you remember, and a place you want to come back to. So we created
+            desserts with the perfect mix of rich chocolate, fresh flavors,
+            and a little extra magic — made to satisfy every craving.
           </p>
 
           <div className={styles.delightWrap}>
             <span className={styles.delight}>
-              Made to delight.
+              Made to crave. Made to share.
               <svg
                 viewBox="0 0 300 18"
                 preserveAspectRatio="none"
@@ -241,14 +235,14 @@ export default function OurStory() {
             <>
               Premium
               <br />
-              Ingredients
+              Always
             </>
           }
           description={
             <>
-              Thoughtfully sourced.
+              Quality ingredients.
               <br />
-              Always the best.
+              No shortcuts.
             </>
           }
         />
@@ -256,12 +250,12 @@ export default function OurStory() {
           left="38.5%"
           top="60%"
           order={7}
-          title="Made Fresh"
+          title="Fresh on Repeat"
           description={
             <>
-              Prepared to order,
+              Made fresh whenever
               <br />
-              made with care.
+              you crave it.
             </>
           }
         />
@@ -271,16 +265,16 @@ export default function OurStory() {
           order={10}
           title={
             <>
-              Crafted
+              Built
               <br />
               to Impress
             </>
           }
           description={
             <>
-              Made to wow—every
+              Looks good.
               <br />
-              plate, every time.
+              Tastes even better.
             </>
           }
         />

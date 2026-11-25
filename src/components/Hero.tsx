@@ -8,15 +8,21 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.visualWrap}>
-        <Image
-          src={heroImage}
-          alt="Chocolate pistachio crepe with strawberries, pistachio cream and a chocolate parfait cup"
-          fill
-          priority
-          placeholder="blur"
-          sizes="(max-width: 860px) 100vw, 58vw"
-          className={styles.visualImg}
-        />
+        <picture>
+          <source
+            media="(max-width: 860px)"
+            srcSet="/images/hero-mobile-approved.png"
+          />
+          <Image
+            src={heroImage}
+            alt="Chokola desserts with strawberries, chocolate, and pistachio cream"
+            fill
+            priority
+            placeholder="blur"
+            sizes="(max-width: 860px) 100vw, 58vw"
+            className={styles.visualImg}
+          />
+        </picture>
         <div className={styles.visualFade} />
       </div>
 
@@ -124,9 +130,9 @@ export default function Hero() {
         <h1 className={styles.headline}>
           <span className={styles.headlinePrimary}>Desserts</span>
           <span className={styles.headlineSecondary}>
-            hit{" "}
+            worth the{" "}
             <span className={styles.headlineAccent}>
-              different.
+              obsession.
               <svg
                 viewBox="0 0 320 26"
                 preserveAspectRatio="none"
@@ -153,8 +159,8 @@ export default function Hero() {
         </h1>
 
         <p className={styles.tagline}>
-          Crepes, waffles, cups &amp; shakes — fresh inside Beachwood Place
-          Mall.
+          Crepes, waffles, cups &amp; shakes made for your sweet cravings —
+          fresh, fun, and waiting for you at Beachwood Place Mall.
         </p>
 
         <div className={styles.ctaRow}>

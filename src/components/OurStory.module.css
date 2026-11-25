@@ -65,14 +65,14 @@
   font-family: var(--font-ui);
   font-weight: 600;
   color: var(--choc-900);
-  font-size: clamp(24px, 5.9cqw, 76px);
+  font-size: min(4.4cqw, 64px);
   line-height: 1.14;
   letter-spacing: -0.022em;
 }
 
 .headlineLine {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .craving {
@@ -103,13 +103,14 @@
 }
 
 .paragraph {
-  margin: 3.4cqw 0 0;
+  margin: 2cqw 0 0;
   font-family: var(--font-ui);
-  font-size: clamp(8px, 1.56cqw, 19px);
+  font-size: min(1.9cqw, 19px);
   font-weight: 400;
-  line-height: 1.72;
+  line-height: 1.55;
   color: var(--text-body);
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
 }
 
 .delightWrap {
@@ -123,11 +124,12 @@
   font-family: var(--font-accent);
   font-weight: 900;
   font-style: italic;
-  font-size: clamp(14px, 2.9cqw, 36px);
+  font-size: min(2.3cqw, 32px);
   line-height: 1.1;
-  letter-spacing: 0.04em;
-  word-spacing: 0.28em;
-  white-space: nowrap;
+  letter-spacing: 0;
+  word-spacing: normal;
+  max-width: 90%;
+  white-space: normal;
   color: var(--pink-story);
 }
 
@@ -279,28 +281,4 @@
   font-size: clamp(7px, 1.37cqw, 17px);
   line-height: 1.5;
   color: var(--text-body);
-}
-
-/* Mobile: no layout overrides — the canvas is fully proportional (aspect-ratio + cqw),
-   so it renders identically to desktop, just scaled down to fit the viewport.
-   Below ~390px the paragraph/delight font-size clamps had already hit their px
-   floor while the container kept shrinking, so the nowrap text started
-   overrunning its box into the row below. Dropping the floor lets them keep
-   shrinking at the same rate as everything else instead of colliding. */
-@media (max-width: 389px) {
-  .label {
-    font-size: 1.3cqw;
-  }
-
-  .headline {
-    font-size: 5.9cqw;
-  }
-
-  .paragraph {
-    font-size: 1.56cqw;
-  }
-
-  .delight {
-    font-size: 2.9cqw;
-  }
 }

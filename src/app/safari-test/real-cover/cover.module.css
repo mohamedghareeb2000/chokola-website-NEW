@@ -1,0 +1,22 @@
+.coverScene {
+  display: block;
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 860px) {
+    .coverScene {
+      --hero-safe-top: env(safe-area-inset-top, 0px);
+      --hero-safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    .coverScene nav[aria-label="Primary"] {
+      padding-top: calc(14px + env(safe-area-inset-top, 0px));
+      padding-left: max(18px, env(safe-area-inset-left, 0px));
+      padding-right: max(18px, env(safe-area-inset-right, 0px));
+    }
+
+    .coverScene footer {
+      padding-bottom: calc(clamp(12px, 1.2vw, 18px) + env(safe-area-inset-bottom, 0px));
+    }
+  }
+}
